@@ -1,0 +1,44 @@
+# Ignore pycache folders
+__pycache__/
+
+# Ignore virtualenv folders
+venv/
+*venv/
+venv
+*.venv
+
+
+# terraform/
+.terraform/
+*hcl
+*.tfstate*
+*.tfstate
+*.tfvars
+
+
+# Dev raw
+dv*/
+
+
+# sensible variables.
+
+.env*
+
+
+
+# dev resources code
+*dev resources_local/
+
+# config
+*config_dev.py*
+*config_model.py*
+*config.py*
+
+**/config_dev.py*
+**/config_model.py*
+**/config.py*
+
+# zips
+*.zip
+**/*.zip
+*.zip*
