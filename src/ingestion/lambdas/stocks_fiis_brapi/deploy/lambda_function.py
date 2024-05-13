@@ -42,13 +42,13 @@ def lambda_handler(event, context):
         params=params
     )
     
-    json_data = api.get_quotes()
     
     # --------------------Api requests wra wrangling
     # ------------------- Use Try and execept
  
     #----------------- execept + control_var for logs management
     try:
+        json_data = api.get_quotes()
         schema =infer_schema(json_data)
         check_json = validate_data_stocks(json_data)
 

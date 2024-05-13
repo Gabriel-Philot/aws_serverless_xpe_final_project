@@ -43,3 +43,4 @@ class Brapi_notSTOCKS__API:
      
         except requests.exceptions.RequestException as e:
             logging.error(f"Request failed: {str(e)}")
+

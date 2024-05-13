@@ -9,10 +9,11 @@ from datetime import datetime, timedelta
 from log_manager import S3LogManager
 from util import control_sucess, infer_schema, convert_to_string
 from json_upload import write_json_to_s3
+from api_requests import Brapi_STOCKS_API, Brapi_notSTOCKS__API
 
 # Variables imports [!WARNING] dont forget to change in config.py file.
-from config_dev import BASE_URL, REGION_NAME, \
-    BUCKET, RAW_PREFIX, LOG_PREFIX, NAME_FUN
+from config import BASE_URL, REGION_NAME, \
+    BUCKET, RAW_PREFIX, LOG_PREFIX, NAME_FUN, TOKEN_GENERATOR, TICKERS
 
 
 # V0 inicial structure for logging ect
