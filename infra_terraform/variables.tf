@@ -12,7 +12,7 @@ variable "project_name" {
 variable "bucket_sufix" {
   type        = string
   description = "Sufix for bucket name"
-  default     = "lambda-teste33"
+  default     = "lambda-teste"
 }
 
 
@@ -32,48 +32,6 @@ variable "aws_profile" {
   type        = string
   description = "AWS profile for credentials"
   sensitive   = true
-}
-
-# Glue
-variable "glue_1_arn" {
-  type = string
-}
-
-variable "glue_script_crypto_path" {
-  type = string
-}
-
-# dont fortget to chance here in the future tu use the same structure as the bucket it self.
-variable "glue_arguments_bucket" {
-  type = string
-}
-
-variable "glue_arguments_prefixraw" {
-  type = string
-}
-
-variable "glue_arguments_prefixtrusted" {
-  type = string
-}
-
-variable "glue_arguments_TempDir" {
-  type = string
-}
-
-variable "glue_arguments_extra-py-files" {
-  type = string
-}
-
-variable "glue_arguments_extra-jars" {
-  type = string
-}
-
-variable "glue_arguments_name_fun_crypto" {
-  type = string
-}
-
-variable "glue_arguments_window_crypto" {
-  type = string
 }
 
 # Lambda
@@ -101,3 +59,83 @@ variable "zip_path_2" {
 variable "zip_path_3" {
   type = string
 }
+
+
+
+# Glue
+variable "glue_1_arn" {
+  type = string
+}
+
+variable "glue_script_model_path" {
+  type = string
+}
+
+
+variable "glue_arguments_TempDir" {
+  type = string
+}
+
+variable "glue_arguments_extra-py-files" {
+  type = string
+}
+
+variable "glue_arguments_extra-jars" {
+  type = string
+}
+
+# crypto
+
+variable "glue_arguments_prefixraw_crypto" {
+  type = string
+}
+
+variable "glue_arguments_prefixtrusted_crypto" {
+  type = string
+}
+
+variable "glue_arguments_name_fun_crypto" {
+  type = string
+}
+
+variable "glue_arguments_window_crypto" {
+  type = string
+}
+
+
+# stocks
+
+variable "glue_arguments_prefixraw_stocks" {
+  type = string
+}
+
+variable "glue_arguments_prefixtrusted_stocks" {
+  type = string
+}
+
+variable "glue_arguments_name_fun_stocks" {
+  type = string
+}
+  
+variable "glue_arguments_window_stocks" {
+  type = string
+}
+  
+# webscraper_infom
+
+variable "glue_arguments_prefixraw_webscraper_infom" {
+  type = string
+}
+  
+variable "glue_arguments_prefixtrusted_webscraper_infom" {
+  type = string
+}
+
+variable "glue_arguments_name_fun_webscraper_infom" {
+  type = string
+}
+  
+variable "glue_arguments_window_webscraper_infom" {
+  type = string
+}
+  
