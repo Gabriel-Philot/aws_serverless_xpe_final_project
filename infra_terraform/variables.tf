@@ -6,13 +6,13 @@ variable "region" {
 
 variable "project_name" {
   type        = string
-  description = "Name of project"
+  description = "aws-serverless-architecture-terraform"
 }
 
 variable "bucket_sufix" {
   type        = string
   description = "Sufix for bucket name"
-  default     = "lambda-teste"
+  default     = "aws-serverless-architecture-terraform"
 }
 
 
