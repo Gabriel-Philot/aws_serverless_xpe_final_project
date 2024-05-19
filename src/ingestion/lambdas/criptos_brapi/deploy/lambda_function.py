@@ -49,6 +49,8 @@ def lambda_handler(event, context):
         data = api.get_other_quotes()['coins']
         schema = infer_schema(data)
         check_json = validate_coin_data(data)
+        for coin in check_json:
+            coin['dateingestion_sp'] = timestamp_SP.strftime("%Y-%m-%d %H:%M:%S")
     # ----------------- execept + control_var for logs management
     except Exception as e:
         control = f'Error msg: {e}'

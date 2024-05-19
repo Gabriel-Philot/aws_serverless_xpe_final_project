@@ -34,7 +34,49 @@ variable "aws_profile" {
   sensitive   = true
 }
 
+# Glue
+variable "glue_1_arn" {
+  type = string
+}
 
+variable "glue_script_crypto_path" {
+  type = string
+}
+
+# dont fortget to chance here in the future tu use the same structure as the bucket it self.
+variable "glue_arguments_bucket" {
+  type = string
+}
+
+variable "glue_arguments_prefixraw" {
+  type = string
+}
+
+variable "glue_arguments_prefixtrusted" {
+  type = string
+}
+
+variable "glue_arguments_TempDir" {
+  type = string
+}
+
+variable "glue_arguments_extra-py-files" {
+  type = string
+}
+
+variable "glue_arguments_extra-jars" {
+  type = string
+}
+
+variable "glue_arguments_name_fun_crypto" {
+  type = string
+}
+
+variable "glue_arguments_window_crypto" {
+  type = string
+}
+
+# Lambda
 variable "layer_1_arn" {
   type = string
 }

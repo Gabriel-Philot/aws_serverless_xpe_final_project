@@ -51,6 +51,8 @@ def lambda_handler(event, context):
         json_data = api.get_quotes()
         schema =infer_schema(json_data)
         check_json = validate_data_stocks(json_data)
+        for coin in check_json:
+            coin['dateingestion_sp'] = timestamp_SP.strftime("%Y-%m-%d %H:%M:%S")
 
     #----------------- execept + control_var for logs management
 

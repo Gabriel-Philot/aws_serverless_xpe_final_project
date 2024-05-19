@@ -36,6 +36,8 @@ def lambda_handler(event, context):
         json_data = web_scrap_info_money(BASE_URL)
         schema =infer_schema(json_data)
         check_json = validate_data(json_data)
+        for coin in check_json:
+            coin['dateingestion_sp'] = timestamp_SP.strftime("%Y-%m-%d %H:%M:%S")
 
     #----------------- execept + control_var for logs management
 

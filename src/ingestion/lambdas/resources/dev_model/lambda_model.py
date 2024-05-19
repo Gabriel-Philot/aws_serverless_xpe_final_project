@@ -34,7 +34,10 @@ def lambda_handler(event, context):
     #for date in get_previous_business_days(5):
         #json_result = api_request_instance.get_routes(date)
         #try:
-
+        #  schema = infer_schema(data)
+        #check_json = validate_coin_data(data)
+        #for coin in check_json:
+        #    coin['dateingestion_sp'] = timestamp_SP.strftime("%Y-%m-%d %H:%M:%S")
         # ----------------- execept + control_var for logs management
 
         #     except Exception as e:
