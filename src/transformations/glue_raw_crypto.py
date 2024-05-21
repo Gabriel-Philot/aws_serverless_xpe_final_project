@@ -126,6 +126,19 @@ except Exception as e:
     print(f"Exception encountered: {e}")
      
 
+
+######################################################################################
+######################################################################################
+
+base_s3_path = f"s3://{BUCKET}"
+final_base_path = f"s3://{BUCKET}/{TRUSTED_PREFIX}"
+table_name = GLUE_NAME
+final_base_path = f"s3://{BUCKET}/{TRUSTED_PREFIX}".format(
+    base_s3_path=base_s3_path, table_name=table_name
+)
+
+delta_df = DeltaTable.forPath(spark, final_base_path)
+delta_df.generate("symlink_format_manifest")
 ######################################################################################
 ######################################################################################
 
