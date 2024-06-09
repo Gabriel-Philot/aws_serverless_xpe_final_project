@@ -2,7 +2,7 @@ FROM python:3.12
 
 # Atualizar pip e instalar dependências
 RUN pip install --upgrade pip
-RUN pip install streamlit pandas boto3 python-dotenv
+RUN pip install streamlit pandas boto3 python-dotenv plotly
 
 # Definir o diretório de trabalho
 WORKDIR /app
