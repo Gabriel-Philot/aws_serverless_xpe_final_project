@@ -13,7 +13,7 @@ try:
     from awsglue.job import Job
     from pyspark.sql import SparkSession
     from pyspark.sql.window import Window
-    from pyspark.sql.functions import row_number, col, desc
+    from pyspark.sql.functions import row_number, col, desc, lag, when
     from pyspark.sql.functions import col, asc, desc, current_timestamp, lit
     from awsglue.utils import getResolvedOptions
     from awsglue.dynamicframe import DynamicFrame
@@ -116,9 +116,9 @@ try:
         .drop('row_num')
         )
     
-    df_window.write \
+    df_window.coalesce(1).write \
             .format("delta") \
-            .mode("overwrite") \
+            .mode("append") \
             .save(f"s3://{BUCKET}/{TRUSTED_PREFIX}")
 
 except Exception as e:
