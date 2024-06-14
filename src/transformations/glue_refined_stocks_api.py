@@ -115,7 +115,7 @@ df_tra = df_tra \
 
 df_tra.coalesce(1).write \
     .format("delta") \
-    .mode("append") \
+    .mode("overwrite") \
     .save(f"s3://{BUCKET}/{refinedstockapi}")
 
 ######################################################################################
