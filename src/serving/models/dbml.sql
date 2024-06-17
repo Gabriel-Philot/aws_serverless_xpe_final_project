@@ -44,5 +44,7 @@ Table stock_dividend {
   dividend_symbol string
 }
 
+
+
 Ref: stock_api.symbol < stock_dividend.stock_symbol
 Ref: historical_dividend.symbol < stock_dividend.dividend_symbol
