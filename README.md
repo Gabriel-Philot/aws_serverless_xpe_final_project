@@ -1,3 +1,3 @@
 # pa_xpe
 
-<img src="/images/arquiteture_draw.png" />
+<img src="/docs/assets/images/arquiteture_draw.png" />
