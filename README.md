@@ -1,3 +1,3 @@
 # pa_xpe
 
-<img src="/images/inicial_architeture_concept.png" />
+<img src="/images/arquiteture_draw.png" />
