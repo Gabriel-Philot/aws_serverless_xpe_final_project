@@ -1,0 +1,20 @@
+site_name: PA-XPE-IGTI2024-AWS-Serverless-architecture
+theme:
+  name: material
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-4
+        name: Modo Claro
+
+    - scheme: slate
+      toggle:
+        icon: material/brightness-7
+        name: Modo Escuro
+
+  language: en
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
