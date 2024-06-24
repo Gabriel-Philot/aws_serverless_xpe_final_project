@@ -1,6 +1,6 @@
 site_name: PA-XPE-IGTI2024-AWS-Serverless-architecture
 theme:
-  name: material
+  name: readthedocs
   palette:
     - scheme: default
       toggle:
