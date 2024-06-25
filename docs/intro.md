@@ -14,7 +14,7 @@ Sharing a bit of the timeline of how it was done, basically, we had the followin
 
 * Three two-week sprints of hands-on work.
 
-* One week to finalize results and conclusions, and we will have another week to present the project, so here I am in the middle to do the documentation and practice my presentation.
+* One week to finalize results and conclusions, and we will have another week to present the project, so here I am in the middle to do the documentation and practice my presentation[24/jun/2024].
 
 From the design thinking process, a hypothetical scenario was created featuring a financial market company. While another financial market project might not seem very creative, it provided a valuable opportunity to delve into this area. Although the knowledge gained about the business side was limited, keeping up with daily news was a valuable step forward. The choice of the financial market was influenced by previous job experiences, which involved frequent micro ingestions of data from various types and sources for logistics purposes. This highlighted the similarity with the data needs in the financial sector, without the need to exhaustively chase down data.
 
