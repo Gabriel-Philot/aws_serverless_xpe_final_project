@@ -13,3 +13,5 @@
 * `Metabase / Dashboard` - Why Metabase? / Dashboard 📊
 * `Price` - Development Cost + Production Price Projection 💵
 * `Results` - Results Achieved in the Project / Potential Business Impact 🎓
+
+Link for the repo: [https://github.com/Gabriel-Philot/xpe_igti_pa](https://github.com/Gabriel-Philot/xpe_igti_pa)
