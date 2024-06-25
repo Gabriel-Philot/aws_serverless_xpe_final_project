@@ -8,7 +8,7 @@
 ## Table of Contents
 
 * `Intro` - Motivation / Objectives 💡
-* `Architecture` - Main concepts and stacks. 📐
+* `Solution` - Main concepts and stacks. 📐
 * `Ingestion Framework` - Main features that included some cool practices 📋
 * `Metabase` - Why Metabase? 📊
 * `Price` - Development Cost + Production Price Projection 💵
