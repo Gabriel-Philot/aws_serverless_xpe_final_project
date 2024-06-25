@@ -13,5 +13,3 @@
 * `Metabase` - Why Metabase? 📊
 * `Price` - Development Cost + Production Price Projection 💵
 * `Results` - Final Discussions 🎓
-* `Others` - in Development 🔧
-* `Presentation` - in Development 🔧

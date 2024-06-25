@@ -2,7 +2,7 @@
 
 ## Motivation 🌎
 
-The goal of this project was the final stage of my MBA (Cloud Data Engineering) which is a free applied project. However, I took the opportunity to apply something I was already doing at work, so in this project I had the chance to introduce various improvements/experiments and features that I believed would add value in that context, both from a technical and a business perspective. Therefore, I recreated a hypothetical scenario similar to the data situation and sought sources that fit into this created context.
+The goal of this project was the final stage of an MBA in Cloud Data Engineering, which is a free applied project. However, the opportunity was taken to apply something already being done at work, allowing for the introduction of various improvements/experiments and features believed to add value both from a technical and business perspective. Therefore, a hypothetical scenario similar to the data situation was recreated and sources fitting this created context were sought.
 
 ## Objectives 📌
 
@@ -14,7 +14,7 @@ Sharing a bit of the timeline of how it was done, basically, we had the followin
 
 * Three two-week sprints of hands-on work.
 
-* One week to finalize results and conclusions, and we will have another week to present the project, so here I am in the middle to do the documentation and practice my presentation[24/jun/2024].
+* One week to finalize results and conclusions, and we will have another week to present the project, so here I am in the middle to do the documentation and practice my presentation (24/jun/2024).
 
 From the design thinking process, a hypothetical scenario was created featuring a financial market company. While another financial market project might not seem very creative, it provided a valuable opportunity to delve into this area. Although the knowledge gained about the business side was limited, keeping up with daily news was a valuable step forward. The choice of the financial market was influenced by previous job experiences, which involved frequent micro ingestions of data from various types and sources for logistics purposes. This highlighted the similarity with the data needs in the financial sector, without the need to exhaustively chase down data.
 
