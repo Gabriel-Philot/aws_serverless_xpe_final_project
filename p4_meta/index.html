@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Metabase / Dashboard - PA-XPE-IGTI2024-AWS-Serverless-architecture</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Metabase / Dashboard";
+        var mkdocs_page_input_path = "p4_meta.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> PA-XPE-IGTI2024-AWS-Serverless-architecture
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../intro/">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../p2_solution/">Solution</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../p3_ing/">Ingestion Framework</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Metabase / Dashboard</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#metabase">Metabase</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dashboard">Dashboard</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../p5_price/">Price</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../p6_results/">Results</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">PA-XPE-IGTI2024-AWS-Serverless-architecture</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Metabase / Dashboard</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="metabase-dashboard">Metabase / Dashboard</h1>
+<h2 id="metabase">Metabase</h2>
+<p>Initially, there was an interest in experimenting with Apache Superset, but due to limited materials on connecting it with Athena, the decision was made to switch to Metabase. Opting out of Power BI was intentional, as the aim was to explore a different tool that could utilize a Docker image, furthering learning experiences on AWS. The choice of Metabase proved rewarding, revisiting it with more knowledge gained since first using it as a data consumer during an internship in data science.</p>
+<p>Therefore, let's highlight the advantages of this choice:</p>
+<p>Imagining a scenario where a company does not adhere to the standard Microsoft stack and aims for agility and cost reduction, Metabase emerges as an excellent choice. From a cost perspective, for 10 analyst users plus dashboards, the expense was estimated at only $30 per month, whereas Power BI would cost $100 for the same number of users. The installation process is relatively straightforward, running a docker-compose on EC2 with some additional configurations, and quickly, it's up and running with a PostgreSQL database maintaining its state and managing its volume.</p>
+<p>Once operational, configuring it via their interface is swift, allowing the creation of different access groups, such as query creators or readers of pre-made queries, etc. There's a wealth of settings available aimed at enforcing security best practices as well as cost and performance optimization. Queries are entirely managed through SQL, which is beneficial from a language standpoint, avoiding the need to learn the more peculiar syntax often associated with data visualization tools.</p>
+<p>In terms of performance, Metabase uses Athena as its querying engine, essentially building a platform on top of Athena, which ensures high performance. With Athena's metadata, it's possible to track which queries are most frequently run and devise strategies to reduce costs. This integration not only enhances performance but also aligns with efficient data management practices.</p>
+<p><img alt="m0_img" src="../assets/images/metabase_01.png" /></p>
+<p>In Metabase, publishing or embedding questions is straightforward and effortless, enhancing delivery speed and ensuring the reuse of questions across different dashboards. This efficiency significantly reduces development time. Such features are particularly well-suited to the context of an initial data project that needs to be structured and deliver value quickly. This capability allows teams to rapidly iterate on insights and visualize trends without needing to recreate queries for different analytical perspectives.</p>
+<p><img alt="m1_img" src="../assets/images/mquestion.png" /></p>
+<h2 id="dashboard">Dashboard</h2>
+<p>Due to security concerns, the link to the Metabase dashboard will not be shared. For access, all ports were left open, prioritizing ease of exploration over security. This was a deliberate choice to experiment with the tool without extensive setup. However, it's important to remember that in a professional setting, several security measures can be implemented, such as embedding the dashboard within a secured website that requires login, or allowing read-only access within Metabase.</p>
+<p>This approach ensures that the dashboard is accessible via the web, making it easy to share with clients or colleagues as needed, while highlighting the flexibility of Metabase for quick deployment and iterative testing in data-driven projects.</p>
+<p>Additionally, the analyses conducted were somewhat random, with the primary intention of exploring the tool's capabilities rather than diving deeply into business analytics or generating substantial insights. This approach was taken due to time constraints and the exploratory nature of the project.</p>
+<p>The main purpose of this dashboard is to complete the project cycle—from data source to data serving—enabling business analysts who understand the domain to engage in meaningful discussions and perform analyses that deliver value to the client. This setup allows for quick setup and iterative exploration, which is crucial in early stages of data projects where the focus is on structuring and rapid value delivery.</p>
+<p><img alt="d0_img" src="../assets/images/dash01.png" /></p>
+<p><img alt="d1_img" src="../assets/images/dash02.png" /></p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../p3_ing/" class="btn btn-neutral float-left" title="Ingestion Framework"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../p5_price/" class="btn btn-neutral float-right" title="Price">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../p3_ing/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../p5_price/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
