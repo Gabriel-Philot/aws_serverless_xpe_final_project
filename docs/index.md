@@ -10,6 +10,6 @@
 * `Intro` - Motivation / Objectives 💡
 * `Solution` - Main concepts and stacks. 📐
 * `Ingestion Framework` - Main features that included some cool practices 📋
-* `Metabase` - Why Metabase? 📊
+* `Metabase / Dashboard` - Why Metabase? / Dashboard 📊
 * `Price` - Development Cost + Production Price Projection 💵
 * `Results` - Final Discussions 🎓

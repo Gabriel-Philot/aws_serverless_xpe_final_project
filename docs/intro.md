@@ -28,4 +28,4 @@ With this information, a solution architecture was designed that:
 In this context, a Serverless solution on AWS would fit, which was how I practically built everything for my project (at my previous job I basically did everything with AWS Lambda, S3, and very little Glue, so this choice was quite timely for me to improve).
 
 
-
+------
