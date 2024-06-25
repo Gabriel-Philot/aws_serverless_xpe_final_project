@@ -78,9 +78,9 @@ Five jobs were developed in Glue:
 
 Data storage is a critical component at nearly every stage of the project, implemented using different object stores (AWS S3 buckets) according to the stage, following the best practices of Medallion architecture type. Data were segregated into three layers:
 
-* **Bronze** - Stores the ingested data in JSON format.
-* **Silver Raw** - Stores data without duplicates in delta format.
-* **Silver Refined** - Stores data with joins, calculated columns, and business-specific columns.
+* **Landing** - Stores the ingested data in JSON format.
+* **Bronze** - Stores data without duplicates in delta format.
+* **Silver** - Stores data with joins, calculated columns, and business-specific columns.
 
 > 🔎 **NOTE**: A Gold layer was not constructed because such layers generally require a project to be at a more advanced stage. Often, new projects are fed by tables from the Silver zone - trusted or refined. Additionally, the project development time was short, and there wasn’t enough time to consolidate a modeling strategy.
 
