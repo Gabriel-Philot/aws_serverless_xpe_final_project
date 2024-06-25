@@ -12,4 +12,4 @@
 * `Ingestion Framework` - Main features that included some cool practices 📋
 * `Metabase / Dashboard` - Why Metabase? / Dashboard 📊
 * `Price` - Development Cost + Production Price Projection 💵
-* `Results` - Final Discussions 🎓
+* `Results` - Results Achieved in the Project / Potential Business Impact 🎓

@@ -4,7 +4,7 @@
 
 ![arc_img](../assets/images/arquiteture_draw.png)
 
-> 💻 **Note**: If you are not familiar with what serverless resources are, the topic will be discussed in the results section and additional materials will be provided in the reference section.
+> 💻 **Note**: If you are not familiar with what serverless resources are, the topic will be discussed in the price section and additional materials will be provided in the reference section.
 
 The goal here is not to delve into every detail of what was used, but rather to explain the core elements of the solution and some details about the concepts and tools employed. We will break it down into parts to make it easier to understand each stage.
 
