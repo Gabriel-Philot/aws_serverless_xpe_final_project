@@ -6,14 +6,8 @@
 > 💾 Applied Project Doc - XPE 2024
 (Final stage of the MBA - Cloud Data Engineering)
 
-## Table of Contents
+## Overview
 
-* `Intro` - Motivation / Objectives 💡
-* `Solution` - Main concepts and stacks. 📐
-* `Ingestion Framework` - Main features that included some cool practices 📋
-* `Metabase / Dashboard` - Why Metabase? / Dashboard 📊
-* `Price` - Development Cost + Production Price Projection 💵
-* `Results` - Results Achieved in the Project / Potential Business Impact 🎓
-* `References` - References 📚
+This project showcases an AWS Serverless architecture, emphasizing scalable data ingestion with AWS Lambda, flexible orchestration with Step Functions, and data processing with AWS Glue. It highlights cost-effective solutions using S3 for storage and Metabase for data visualization, ensuring efficient performance and easy data access.
 
-#### Check out the details and more -> documentation: : [https://gabriel-philot.github.io/xpe_igti_pa/](https://gabriel-philot.github.io/xpe_igti_pa/)
+For detailed information, please refer to the [documentation](https://gabriel-philot.github.io/xpe_igti_pa/).
