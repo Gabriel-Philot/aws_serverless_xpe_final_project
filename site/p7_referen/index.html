@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Introduction - PA-XPE-IGTI2024-AWS-Serverless-architecture</title>
+    <title>References - PA-XPE-IGTI2024-AWS-Serverless-architecture</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,8 +13,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Introduction";
-        var mkdocs_page_input_path = "intro.md";
+        var mkdocs_page_name = "References";
+        var mkdocs_page_input_path = "p7_referen.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -44,14 +44,8 @@
                 <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
                 </li>
               </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Introduction</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#motivation">Motivation 🌎</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#objectives">Objectives 📌</a>
-    </li>
-    </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../intro/">Introduction</a>
                 </li>
               </ul>
               <ul>
@@ -74,8 +68,20 @@
                 <li class="toctree-l1"><a class="reference internal" href="../p6_results/">Results</a>
                 </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../p7_referen/">References</a>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">References</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#serverless">Serverless</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#aws">AWS</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#lakehouse">Lakehouse</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#metabase">Metabase</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#humor">Humor</a>
+    </li>
+    </ul>
                 </li>
               </ul>
       </div>
@@ -92,7 +98,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Introduction</li>
+      <li class="breadcrumb-item active">References</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -101,39 +107,28 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="introduction">Introduction</h1>
-<h2 id="motivation">Motivation 🌎</h2>
-<p>The goal of this project was the final stage of an MBA in Cloud Data Engineering, which is a free applied project. However, the opportunity was taken to apply something already being done at work, allowing for the introduction of various improvements/experiments and features believed to add value both from a technical and business perspective. Therefore, a hypothetical scenario similar to the data situation was recreated and sources fitting this created context were sought.</p>
-<h2 id="objectives">Objectives 📌</h2>
-<p>Based on the project requirements provided by the institution, we would follow a stage of creation and modeling of what we would do for our thesis. The solution was previously conceived with a design thinking bias to establish the objectives and solution that will be built.</p>
-<p>Sharing a bit of the timeline of how it was done, basically, we had the following:</p>
-<ul>
-<li>
-<p>Two weeks of using various artifacts and design thinking techniques to shape the solution and arrive at a backlog.</p>
-</li>
-<li>
-<p>Three two-week sprints of hands-on work.</p>
-</li>
-<li>
-<p>One week to finalize results and conclusions, and we will have another week to present the project, so here I am in the middle to do the documentation and practice my presentation (24/jun/2024).</p>
-</li>
-</ul>
-<p>From the design thinking process, a hypothetical scenario was created featuring a financial market company. While another financial market project might not seem very creative, it provided a valuable opportunity to delve into this area. Although the knowledge gained about the business side was limited, keeping up with daily news was a valuable step forward. The choice of the financial market was influenced by previous job experiences, which involved frequent micro ingestions of data from various types and sources for logistics purposes. This highlighted the similarity with the data needs in the financial sector, without the need to exhaustively chase down data.</p>
-<p>With this information, a solution architecture was designed that:</p>
-<ul>
-<li>Can scale without issues, meaning no matter how many assets there are or how many ingestions, it won't impact performance or data availability.</li>
-<li>Flexible, following the first point, able to scale up/down resources, with the ability to ingest data from any type of source (API, Webscrap, legacy databases etc.).</li>
-<li>Centralized data provision for clients and analysts (internal stakeholders).</li>
-<li>Low entry cost.</li>
-</ul>
-<p>In this context, a Serverless solution on AWS would fit, which was how I practically built everything for my project (at my previous job I basically did everything with AWS Lambda, S3, and very little Glue, so this choice was quite timely for me to improve).</p>
-<hr />
+                <h1 id="references">References</h1>
+<h2 id="serverless">Serverless</h2>
+<p><a href="https://www.youtube.com/watch?v=YoBfFwsoWIU">What is Serverless Computing?</a></p>
+<h2 id="aws">AWS</h2>
+<p><a href="https://www.youtube.com/@SoumilShah">https://www.youtube.com/@SoumilShah</a> - For in-depth technical insights on AWS Glue and other related AWS and Lakehouse topics. His content has been a primary technical source for this project. Highly recommended.</p>
+<p><a href="https://docs.aws.amazon.com/s3/?nc2=h_ql_doc_s3">https://docs.aws.amazon.com/s3/?nc2=h_ql_doc_s3</a></p>
+<p><a href="https://medium.com/cloud-native-daily/building-a-scalable-multi-datasource-etl-platform-with-aws-glue-22f1549995f4">https://medium.com/cloud-native-daily/building-a-scalable-multi-datasource-etl-platform-with-aws-glue-22f1549995f4</a></p>
+<p><a href="https://www.youtube.com/watch?v=D-t4UR4HfNc">rds_terraform</a></p>
+<h2 id="lakehouse">Lakehouse</h2>
+<p><a href="https://juhache.substack.com/p/multi-engine-data-stack-v1?r=l9wvi&amp;triedRedirect=true">https://juhache.substack.com/p/multi-engine-data-stack-v1?r=l9wvi&amp;triedRedirect=true</a></p>
+<p><a href="https://blog.det.life/i-spent-5-hours-understanding-more-about-the-delta-lake-table-format-b8516c5091eb">https://blog.det.life/i-spent-5-hours-understanding-more-about-the-delta-lake-table-format-b8516c5091eb</a></p>
+<p><a href="https://www.youtube.com/watch?v=GrqjZoVokNQ">official Delta+glue</a></p>
+<p><a href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-format-iceberg.html">https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-format-iceberg.html</a></p>
+<h2 id="metabase">Metabase</h2>
+<p>https://www.metabase.com/docs/latest/installation-and-operation/running-metabase-on-docker</p>
+<h2 id="humor">Humor</h2>
+<p><a href="https://www.youtube.com/watch?v=qQk94CjRvIs">Fireship talks about Serverless</a></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../p2_solution/" class="btn btn-neutral float-right" title="Solution">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../p6_results/" class="btn btn-neutral float-left" title="Results"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -156,10 +151,8 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../p6_results/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../p2_solution/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

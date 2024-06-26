@@ -55,7 +55,7 @@ This comes to approximately $165 per month. Indeed, the processing stage is the 
 * $25 (S3) + $29 (Athena) + $30 (EC2) + $6 (other services) + $165 (Glue)
 * $255 per month | $3,060 per year
 
-## Glue/Serverless price discussion
+## Glue/Serverless price discussion 🔍
 
 Consultations with several senior professionals in the field have validated that the overall pricing of our architecture is exceptionally competitive, even for solutions aimed at micro and small businesses. It's important to note that all resource costs have been estimated high, and there remains significant room for optimization. A particular point of interest is that making these high estimates without extensive testing on Glue has likely inflated the price, as various optimizations could be implemented during the move to production to reduce costs. Furthermore, the lack of data on runs with higher volumes means that the projection for Spark's performance and time requirements is more qualitative.
 
