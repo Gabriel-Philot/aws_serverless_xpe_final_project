@@ -31,6 +31,6 @@ The final idea, which was not developed due to time constraints, involved using 
 
 For cases involving new pipelines or different endpoints, this approach remains highly beneficial as it always allows for reuse of components and leverages Infrastructure as Code (IaC) to save many configurations that would be time-consuming through the interface.
 
-Additionally, some practices were adapted for use in Glue, where the three silver-raw jobs utilize the same script, with only variables in the Terraform files being adjusted. Thus, at least in the initial processing stage, development speed and standardization are also ensured, practices that are highly valuable and consistently add significant value to the project when well implemented.
+Additionally, some practices were adapted for use in Glue, where the three bronze jobs utilize the same script, with only variables in the Terraform files being adjusted. Thus, at least in the initial processing stage, development speed and standardization are also ensured, practices that are highly valuable and consistently add significant value to the project when well implemented.
 
 ------

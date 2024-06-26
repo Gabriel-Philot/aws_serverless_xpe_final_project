@@ -81,7 +81,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#glueserverless-price-discussion">Glue/Serverless price discussion</a>
+    <li class="toctree-l2"><a class="reference internal" href="#glueserverless-price-discussion">Glue/Serverless price discussion 🔍</a>
     </li>
     </ul>
                 </li>
@@ -153,7 +153,7 @@
 <li>$25 (S3) + $29 (Athena) + $30 (EC2) + $6 (other services) + $165 (Glue)</li>
 <li>$255 per month | $3,060 per year</li>
 </ul>
-<h2 id="glueserverless-price-discussion">Glue/Serverless price discussion</h2>
+<h2 id="glueserverless-price-discussion">Glue/Serverless price discussion 🔍</h2>
 <p>Consultations with several senior professionals in the field have validated that the overall pricing of our architecture is exceptionally competitive, even for solutions aimed at micro and small businesses. It's important to note that all resource costs have been estimated high, and there remains significant room for optimization. A particular point of interest is that making these high estimates without extensive testing on Glue has likely inflated the price, as various optimizations could be implemented during the move to production to reduce costs. Furthermore, the lack of data on runs with higher volumes means that the projection for Spark's performance and time requirements is more qualitative.</p>
 <p>It’s also worth discussing whether, given these costs, it might be advisable to have a dedicated resource for our Spark jobs. The answer isn't straightforward. When discussing serverless architecture, some minor configurations are necessary, but ultimately, AWS handles the cluster configuration and ensures their availability, which justifies the higher service cost compared to managing your own resources. However, in startup scenarios and certain contexts, the cost for EMR services can initially be more expensive than the serverless solution. A review of some EMR configurations revealed that prices start at around $140 per month for a single core setup.</p>
 <p>This discussion highlights the trade-offs between cost, management overhead, and scalability when choosing between serverless architectures and dedicated resources like EMR. Further exploration and cost-benefit analysis might be required to determine the best approach for specific business needs and growth stages.</p>
