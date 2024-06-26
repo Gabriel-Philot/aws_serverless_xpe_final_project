@@ -57,7 +57,7 @@ This comes to approximately $165 per month. Indeed, the processing stage is the 
 
 ## Glue/Serverless price discussion
 
-Consultations with several senior professionals in the field have indicated that the price for Glue serverless is exceptionally low, even for solutions aimed at micro/small businesses. It's important to note that all resource costs have been estimated high, and there remains significant room for optimization. A particular point of interest is that making these high estimates without extensive testing on Glue has likely inflated the price, as various optimizations could be implemented during the move to production to reduce costs. Furthermore, the lack of data on runs with higher volumes means that the projection for Spark's performance and time requirements is more qualitative.
+Consultations with several senior professionals in the field have validated that the overall pricing of our architecture is exceptionally competitive, even for solutions aimed at micro and small businesses. It's important to note that all resource costs have been estimated high, and there remains significant room for optimization. A particular point of interest is that making these high estimates without extensive testing on Glue has likely inflated the price, as various optimizations could be implemented during the move to production to reduce costs. Furthermore, the lack of data on runs with higher volumes means that the projection for Spark's performance and time requirements is more qualitative.
 
 It’s also worth discussing whether, given these costs, it might be advisable to have a dedicated resource for our Spark jobs. The answer isn't straightforward. When discussing serverless architecture, some minor configurations are necessary, but ultimately, AWS handles the cluster configuration and ensures their availability, which justifies the higher service cost compared to managing your own resources. However, in startup scenarios and certain contexts, the cost for EMR services can initially be more expensive than the serverless solution. A review of some EMR configurations revealed that prices start at around $140 per month for a single core setup.
 
@@ -68,8 +68,8 @@ This discussion highlights the trade-offs between cost, management overhead, and
 
 This section delves into the finer details of the solution:
 
-* Load Tolerance: Is the machine really going to handle the maximum load during peak hours?
-* Upgrade Necessity: Might there be a need to upgrade or evolve this machine to handle increased loads (more costly configuration)?
+* Load Tolerance: Is the cluster really going to handle the maximum load during peak hours?
+* Upgrade Necessity: Might there be a need to upgrade or evolve this cluster to handle increased loads (more costly configuration)?
 * Monitoring and Configuration Time: How much time will be spent monitoring and actually finding a configuration that matches the company's usage?
 * Engineering Time: How many hours will engineers spend configuring this?
 * EMR Usage Time: Will using EMR require more hours for each pipeline?
@@ -78,3 +78,5 @@ This section delves into the finer details of the solution:
 The discussion isn't merely about raw pricing. It also involves the cost of specialized human resources. The intent here is not just to advocate that serverless is better but to broaden the discussion beyond simple cost calculations because every business has its own pace and needs.
 
 The point is raised because, in the future, it might be valid to move away from Glue to keep a better track of expenses. More customized tools tend to be less expensive, and there are several current solutions that could be implemented with a focus on costs. For example, using Terraform/GitOps to spin up an EMR at scheduled times to run jobs and then tear everything down, thus only paying for processing hours, could significantly reduce costs. However, this approach introduces greater complexity and requires a well-established business model since such a solution demands more time and labor to develop (more investment in human work hours).
+
+To conclude this section, it's fitting to reflect on a powerful statement by the famous YouTuber, Fireship: "In the cloud, we don't have solutions, only trade-offs." This emphasizes that there isn't a one-size-fits-all solution in cloud computing. Instead, it's a continual balancing act, where we must remain vigilant and make decisions that best fit the business needs, understanding where we are willing to compromise ($$$) more.

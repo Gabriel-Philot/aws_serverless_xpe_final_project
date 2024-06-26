@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Ingestion Framework - PA-XPE-IGTI2024-AWS-Serverless-architecture</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Ingestion Framework";
+        var mkdocs_page_input_path = "p3_ing.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> PA-XPE-IGTI2024-AWS-Serverless-architecture
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../intro/">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../p2_solution/">Solution</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Ingestion Framework</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#lambdas">Lambdas</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../p4_meta/">Metabase / Dashboard</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../p5_price/">Price</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../p6_results/">Results</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">PA-XPE-IGTI2024-AWS-Serverless-architecture</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Ingestion Framework</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="ingestion-framework">Ingestion Framework</h1>
+<p>This section highlights the development aspects of data ingestion and the initial processing layer. A framework was established for data ingestion, designed to facilitate the addition of new sources quickly, emphasizing the importance of standardization and step-by-step guidance for creating and replicating new Lambdas, which proved extremely useful in this context.</p>
+<h2 id="lambdas">Lambdas</h2>
+<p><img alt="Lambda Setup" src="../assets/images/lambda.png" /></p>
+<p>Lambdas, essentially serverless functions (managed by AWS, which takes care of the infrastructure and resources needed), can be configured with basic settings like the programming language and system architecture (x86_64). However, those familiar with Lambdas often encounter lengthy and complex scripts that are challenging to read and debug.</p>
+<p>The goal was to standardize a simple and organized way to develop and deploy these functions.</p>
+<ul>
+<li>Initially, standard function modules/classes were created for commonly used functions/instances in this context, such as sending received API JSON to a bucket, API interaction (which might vary depending on the API endpoint), data typing verification with Pydantic (subject to changes), log creation, and automatic sending to a bucket, among other functionalities.</li>
+</ul>
+<p><img alt="Lambda Import" src="../assets/images/lambda_import.png" /></p>
+<ul>
+<li>Typically, Lambdas are developed locally due to convenience (even using notebooks to speed up development), so these common libraries are automatically imported regardless of the directory path (to keep deployment organized). Lambda functions always follow the same structure to reuse functions and ensure correct log collection.</li>
+</ul>
+<p><img alt="lb2_img" src="../assets/images/lambda_patern.png" /></p>
+<ul>
+<li>Scripts were designed to eliminate all hard-coded variables, where each used variable would be accessed from a separate configuration file, allowing easy replication of a Lambda with the same endpoint and facilitating code readability and variable checking.</li>
+</ul>
+<p><img alt="Lambda Hardcoded Variables" src="../assets/images/lambda_hardecoded.png" /></p>
+<ul>
+<li>With the script functional, the deployment stage follows. Utilizing the earlier steps, a straightforward method to deploy compound Lambdas (comprising more than one file) is through zipping. With this approach, common resources are already inside the standard zip, which is copied to a new directory where lambda_function.py/config.py and possibly another file with specific requirements are updated.</li>
+</ul>
+<p>With all the points above addressed, the rest involves simply replicating the resource with necessary configurations via Terraform, requiring only the path of the zip file. This ensures high ease of replication for similar services, where, for instance, only the assets in the config file need to be added or modified. This setup is integrated into the Step Functions of Terraform, enabling high speed and potential for automation.</p>
+<p>The final idea, which was not developed due to time constraints, involved using a form input to check for ingested stocks via an endpoint. If a particular asset was missing, a bash script would create the configuration file and replicate the resource automatically.</p>
+<p>For cases involving new pipelines or different endpoints, this approach remains highly beneficial as it always allows for reuse of components and leverages Infrastructure as Code (IaC) to save many configurations that would be time-consuming through the interface.</p>
+<p>Additionally, some practices were adapted for use in Glue, where the three silver-raw jobs utilize the same script, with only variables in the Terraform files being adjusted. Thus, at least in the initial processing stage, development speed and standardization are also ensured, practices that are highly valuable and consistently add significant value to the project when well implemented.</p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../p2_solution/" class="btn btn-neutral float-left" title="Solution"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../p4_meta/" class="btn btn-neutral float-right" title="Metabase / Dashboard">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../p2_solution/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../p4_meta/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Results - PA-XPE-IGTI2024-AWS-Serverless-architecture</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Results";
+        var mkdocs_page_input_path = "p6_results.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> PA-XPE-IGTI2024-AWS-Serverless-architecture
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../intro/">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../p2_solution/">Solution</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../p3_ing/">Ingestion Framework</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../p4_meta/">Metabase / Dashboard</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../p5_price/">Price</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Results</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#scalable-solution">Scalable Solution</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#flexible-architecture">Flexible Architecture</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#data-persistence-across-layers">Data Persistence Across Layers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#centralized-data-availability-via-metabase">Centralized Data Availability via Metabase</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#data-quality-and-observability">Data Quality and Observability</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#finops-and-cost-efficient-architecture">FinOps and Cost-Efficient Architecture</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#potential-business-impact">Potential Business Impact 💰</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#analysts-time-efficiency">Analysts' Time Efficiency</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#cost-savings-with-the-new-solution">Cost Savings with the New Solution</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#enhanced-analytical-output">Enhanced Analytical Output</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">PA-XPE-IGTI2024-AWS-Serverless-architecture</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Results</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="results">Results</h1>
+<h2 id="scalable-solution">Scalable Solution</h2>
+<p>The solution is scalable, capable of ingesting new data sources without impacting performance—a key premise from the start of the project. In the financial world, there's a continuous need for new data to add new assets for analysis and client portfolios. The solution ensures this through a developed ingestion framework, providing a simple and agile method to add new assets and endpoints.</p>
+<h2 id="flexible-architecture">Flexible Architecture</h2>
+<p>The architecture is malleable, allowing for the scaling up or dismantling of resources without impacting existing setups, fitting new pipelines, or adapting Lambdas for existing pipelines. It has been demonstrated during the project that our architecture can smoothly ingest data in various formats—APIs, web scraping, and databases—through AWS's serverless resources. Additionally, adjusting the update frequency is easily managed in the orchestration stage by merely changing the cron configuration in AWS Step Functions.</p>
+<h2 id="data-persistence-across-layers">Data Persistence Across Layers</h2>
+<p>Data is stored across various layers, offering several advantages such as maintaining a real historical data record for legal reasons and more analytical layers focused on performance and cost-efficiency. Understanding business demands, measures can be taken to transfer less frequently used data to even cheaper storage layers (like AWS Glacier), thereby ensuring performance and cost efficiency in the same scenario.</p>
+<h2 id="centralized-data-availability-via-metabase">Centralized Data Availability via Metabase</h2>
+<p>Data is centralized and made accessible through Metabase, which interfaces with Athena, a high-performance tool capable of accessing Delta-format data, thus enhancing performance and reducing costs. Within Metabase, dashboards can be published and accessed on the web (both PC and mobile) by clients. Data and Business Analysts can also access the refined tables to conduct studies and create dashboards and reports.</p>
+<h2 id="data-quality-and-observability">Data Quality and Observability</h2>
+<p>Observability and understanding of data ingestion are emphasized in the pipelines to enable preventive actions against failures and facilitate effective communication with other departments.</p>
+<h2 id="finops-and-cost-efficient-architecture">FinOps and Cost-Efficient Architecture</h2>
+<p>The architecture is highly cost-effective, capable of handling production scenarios with minimal adjustments.</p>
+<ul>
+<li><strong>POC Development Cost</strong>: Less than $50</li>
+<li><strong>Projected Production Cost</strong>: $255 per month | $3060 per year 💸</li>
+</ul>
+<h2 id="potential-business-impact">Potential Business Impact 💰</h2>
+<h3 id="analysts-time-efficiency">Analysts' Time Efficiency</h3>
+<p>It's well known that analysts spend considerable hours collecting and preparing data before they can even begin their actual analysis. After a brief web search, a conservative estimate suggests that each analyst spends around 10 hours per week on these tasks (studies indicate it could be more than 30 hours). For a company with 10 analysts, this equates to about 100 hours per week, or 400 hours per month. Given the average cost of R$40 per hour for a mid-level analyst, the company spends approximately R$16,000 monthly on these preparatory tasks.</p>
+<h3 id="cost-savings-with-the-new-solution">Cost Savings with the New Solution</h3>
+<p>Our solution, projected to cost about R$1,400 per month, can significantly reduce these expenses, saving the business around R$14,000 per month or R$168,000 annually. This allows funds to be reallocated to marketing or other impactful business activities.</p>
+<h3 id="enhanced-analytical-output">Enhanced Analytical Output</h3>
+<p>Moreover, the time saved for analysts can lead to more analytical outcomes, potentially creating additional value for clients and, consequently, the business. This increase in productivity and effectiveness could translate into a competitive advantage in the marketplace.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../p5_price/" class="btn btn-neutral float-left" title="Price"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../p5_price/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
